@@ -27,7 +27,11 @@
   </tbody>
 </table>
 
-<%= link_to 'Back', rooms_path %>
+<% if session[:role] == "admin" %>
+    <%= link_to 'Back', admins_homepage_path %>
+<%else%>
+    <%= link_to 'Back', members_homepage_path%>
+<%end%>
 
 
 

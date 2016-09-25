@@ -28,4 +28,7 @@
 
 <br>
 
-<%= link_to 'Add New Room', new_room_path %>
+<% if session[:role] == "admin" %>
+    <%= link_to 'Add New Room', new_room_path %>
+    <%= link_to 'Back', admins_homepage_path %>
+<%end%>

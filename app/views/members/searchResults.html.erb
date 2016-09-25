@@ -44,3 +44,12 @@
     <h2> No free Reservation Slots Available </h2>
   <%end%>
 <% end %>
+
+<%= link_to 'Search Again', members_search_path %>
+<% if session[:role] == "admin" %>
+    <%= link_to 'Home Page', admins_homepage_path %>
+<%else%>
+    <%= link_to 'Home Page', members_homepage_path%>
+<%end%>
+
+

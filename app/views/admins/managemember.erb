@@ -22,4 +22,7 @@
 </table>
 
 <br>
+<% if session[:role] == "admin" %>
+    <%= link_to 'Back', admins_homepage_path %>
+<%end%>
 

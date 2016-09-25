@@ -150,7 +150,7 @@ class MembersController < ApplicationController
   end
 
   def pastReservations
-    status_code = isMemberLoggedIn
+    status_code = isMemberLoggedIn(false)
     if status_code == false
       flash[:notice] = "Please login before you continue"
       render members_signin_path and return

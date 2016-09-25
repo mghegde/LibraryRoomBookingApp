@@ -6,3 +6,6 @@
     <%= email_field_tag "email" %>
     <%= submit_tag "Add Permission" %>
 <% end %>
+<% if session[:role] == "admin" %>
+    <%= link_to 'Back', admins_homepage_path %>
+<%end%>

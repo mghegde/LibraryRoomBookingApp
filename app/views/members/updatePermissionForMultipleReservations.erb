@@ -2,4 +2,6 @@
     <div class="error"><%= flash[:notice] %></div>
 <% end %>
 
-<%= link_to "Main page", admins_welcome_path %>
+<% if session[:role] == "admin" %>
+    <%= link_to 'Home Page', admins_homepage_path %>
+<%end%>
