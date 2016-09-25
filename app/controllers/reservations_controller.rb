@@ -80,7 +80,7 @@ class ReservationsController < ApplicationController
     end
 
     #User can only reserve one room at a perticular date and time without extra permission from admin
-    @user_reservations = Reservation.where("members_id LIKE ? and ? <= end_time and start_time <= ? ", @member.first.id,
+    @user_reservations = Reservation.where("members_id LIKE = and ? <= end_time and start_time <= ? ", @member.first.id,
                                               @reservation.start_time, @reservation.end_time)
     if not @user_reservations.empty? and @member.first.isMultipleReservationAllowed != "Yes"
       flash[:notice] = "ERROR : You already have reservation from #{@reservation.start_time} to #{@reservation.end_time} .
