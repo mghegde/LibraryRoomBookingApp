@@ -101,8 +101,12 @@ class ReservationsController < ApplicationController
 
     respond_to do |format|
       if @member.first.save
-        puts @member.first.reservations.start_time
-        puts @member.first.reservations.end_time
+        @member.first.reservations.each do |res|
+          puts res.start_time
+          puts res.end_time
+          puts "------------------"
+        end
+
         format.html { redirect_to @reservation, notice: 'Reservation was successfully created.' and return }
         format.json { render :show, status: :created, location: @reservation }
       else
