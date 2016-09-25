@@ -95,11 +95,14 @@ class ReservationsController < ApplicationController
     SendEmail.reservation_email(@member.first, @reservation).deliver
 
     puts "reservation"
-    puts @reservation
+    puts @reservation.start_time
+    puts @reservation.end_time
     puts "Before saving"
-    puts @member.first.reservations
+
     respond_to do |format|
       if @member.first.save
+        puts @member.first.reservations.start_time
+        puts @member.first.reservations.end_time
         format.html { redirect_to @reservation, notice: 'Reservation was successfully created.' and return }
         format.json { render :show, status: :created, location: @reservation }
       else
