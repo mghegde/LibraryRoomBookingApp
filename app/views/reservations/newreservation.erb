@@ -7,3 +7,8 @@
   <%= select_tag(:building, options_for_select([["D.H.Hill", "D.H.Hill"],['Hunt', 'James. B. Hunt']], 'James. B. Hunt')) %>
   <%= submit_tag("Submit") %>
 <% end %>
+<% if session[:role] == "admin" %>
+    <%= link_to 'Back', admins_homepage_path %>
+<%else%>
+    <%= link_to 'Back', members_homepage_path%>
+<%end%>
