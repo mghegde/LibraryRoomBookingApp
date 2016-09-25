@@ -12,7 +12,7 @@
 
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <% if session[:role] == "admin" %>
-    <%= link_to 'Back', admins_homepage_path %>
+    <%= link_to 'Back', library_home_path %>
 <%else%>
     <%= link_to 'Back', library_home_path%>
 <%end%>
