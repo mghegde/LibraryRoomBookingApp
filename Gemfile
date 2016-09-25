@@ -3,6 +3,14 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.10'
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
+
 gem 'seed-fu'
 
 # Use SCSS for stylesheets
@@ -36,7 +44,4 @@ gem 'spring',        group: :development
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'pg'
-gem 'rails_12factor'
