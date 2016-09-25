@@ -9,6 +9,8 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_stdout_logging'
+  gem 'rails_12factor'
 end
 
 gem 'seed-fu'
