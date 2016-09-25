@@ -54,6 +54,8 @@ GEM
     mime-types-data (3.2016.0521)
     minitest (5.9.0)
     multi_json (1.12.1)
+    pg (0.19.0)
+    pg (0.19.0-x86-mingw32)
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -84,6 +86,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    seed-fu (2.3.6)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
     spring (1.7.2)
     sprockets (2.12.4)
       hike (~> 1.2)
@@ -117,9 +122,11 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   rails (= 4.1.10)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  seed-fu
   spring
   sqlite3
   turbolinks
