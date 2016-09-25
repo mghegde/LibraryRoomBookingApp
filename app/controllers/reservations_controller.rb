@@ -94,8 +94,10 @@ class ReservationsController < ApplicationController
     @member.first.reservations << @reservation
     SendEmail.reservation_email(@member.first, @reservation).deliver
 
+    puts "reservation"
+    puts @reservation
     puts "Before saving"
-    puts @member.first
+    puts @member.first.reservations
     respond_to do |format|
       if @member.first.save
         format.html { redirect_to @reservation, notice: 'Reservation was successfully created.' and return }
