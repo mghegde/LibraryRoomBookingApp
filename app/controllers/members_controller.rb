@@ -200,7 +200,10 @@ class MembersController < ApplicationController
       end
     else
       currentTime = DateTime.now
+      puts "In else part"
+      puts DateTime.now
     end
+
 
     rooms = nil
 
