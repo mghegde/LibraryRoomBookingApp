@@ -4,6 +4,8 @@
 <br />
 <br />
 <br />
+<%= link_to 'Add new Admin', new_admin_path %>
+<br />
 <%= link_to 'Add new room', new_room_path %>
 <br />
 <%= link_to 'Book the room', reservations_newreservation_path %>
@@ -17,5 +19,3 @@
 <%= link_to 'Manage profile', edit_admin_path(@admin.first) %>
 <br />
 <%= link_to 'Add Multiple reservation permission to members', members_addPermission_path %>
-<br />
-<%= link_to 'Members with multiple reservation permission', admins_getmembersWithMultipleReservation_path %>

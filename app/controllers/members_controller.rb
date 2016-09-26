@@ -310,7 +310,7 @@ class MembersController < ApplicationController
   # DELETE /members/1
   # DELETE /members/1.json
   def destroy
-    status_code = isMemberLoggedIn
+    status_code = isMemberLoggedIn(false)
 
     if status_code == false
       flash[:notice] = "Please login before you continue"
