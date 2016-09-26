@@ -6,7 +6,7 @@ Username: root@ncsu.edu
 
 Password: root
 
-Link to the Heroku Deployment : http://libraryappoodproject1.herokuapp.com/ 
+Link to the Heroku Deployment : http://sleepy-garden-67038.herokuapp.com/
 
 Once you are logged in as a member :
 
@@ -40,5 +40,3 @@ If you are logged in as admin :
 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
