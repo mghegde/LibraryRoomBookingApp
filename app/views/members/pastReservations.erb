@@ -26,7 +26,7 @@
     <h1>No past reservations found</h1>
 <% end %>
 <% if session[:role] == "admin" %>
-    <%= link_to 'Back', admins_homepage_path %>
+    <%= link_to 'Back', admins_managemember_path %>
 <%else%>
     <%= link_to 'Back', members_homepage_path%>
 <%end%>

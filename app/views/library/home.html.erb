@@ -1,5 +1,6 @@
 <h1>Welcome to NCSU libraries</h1>
-
+<%session[:name] = nil%>
+<%session[:role] = nil%>
 <h2> Member </h2>
 <%= link_to 'Signup Now', new_member_path %>
 <br />

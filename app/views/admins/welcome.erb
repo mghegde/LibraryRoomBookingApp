@@ -8,20 +8,22 @@
 <br />
 <%= link_to 'Add new room', new_room_path %>
 <br />
+<%= link_to 'Add new Member', new_member_path %>
+<br />
 <%= link_to 'Book the room', reservations_newreservation_path %>
-<br />
-<%= link_to 'Manage members', admins_managemember_path %>
-<br />
-<%= link_to 'Manage reservations', admins_managereservation_path %>
 <br />
 <%= link_to 'Search available rooms', members_search_path %>
 <br />
-<%= link_to 'Manage profile', edit_admin_path(@admin.first) %>
+<%= link_to 'Edit profile', edit_admin_path(@admin.first) %>
 <br />
 <%= link_to 'Add Multiple reservation permission to members', members_addPermission_path %>
 <br />
-<%= link_to 'Manage Admins', admins_path %>
+<%= link_to 'Manage (Edit/Delete/View) Admins', admins_path %>
 <br />
-<%= link_to 'Manage Rooms', rooms_path %>
+<%= link_to 'Manage(Edit/Delete/View) Rooms', rooms_path %>
+<br />
+<%= link_to 'Manage (Delete Member, View Reservations) Members', admins_managemember_path %>
+<br />
+<%= link_to 'Manage (Delete Reservations) Current/Future Reservations', admins_managereservation_path %>
 <br />
 <%= link_to 'Sign out', library_home_path %>

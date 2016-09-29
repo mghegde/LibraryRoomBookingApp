@@ -10,9 +10,9 @@
   <%= @member.email %>
 </p>
 
-<%= link_to 'Edit', edit_member_path(@member) %> |
 <% if session[:role] == "admin" %>
-    <%= link_to 'Back', library_home_path %>
+    <%= link_to 'Back', admins_homepage_path %>
 <%else%>
-    <%= link_to 'Back', library_home_path%>
+    <%= link_to 'Edit', edit_member_path(@member) %>
+    <%= link_to 'Back', members_homepage_path%>
 <%end%>

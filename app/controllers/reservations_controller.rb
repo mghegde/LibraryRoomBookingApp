@@ -79,6 +79,21 @@ class ReservationsController < ApplicationController
       render 'reservations/newreservation' and return
     end
 
+    if Time.now + 7.days < @reservation.start_time
+      flash[:notice] = "ERROR : Reservation can be made only 1 week in advance from today"
+      render 'reservations/newreservation' and return
+    end
+
+    if @reservation.start_time > @reservation.end_time
+      flash[:notice] = "ERROR: Booking start  time can't be greater than end time"
+      render 'reservations/newreservation' and return
+    end
+
+    if Time.now - 5.minutes >= @reservation.start_time
+      flash[:notice] = "ERROR: Booking start time should not be less than current time"
+      render 'reservations/newreservation' and return
+    end
+
     #User can only reserve one room at a perticular date and time without extra permission from admin
     @user_reservations = Reservation.where("members_id = ? and ? <= end_time and start_time <= ? ", @member.first.id,
                                               @reservation.start_time, @reservation.end_time)

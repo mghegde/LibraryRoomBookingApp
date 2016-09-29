@@ -1,6 +1,13 @@
 <h1>Editing admin</h1>
 
-<%= render 'form' %>
+<% if  @admin.email != 'root@ncsu.edu' %>
+   <%= render 'form' %>
+<% end %>
+
+<% if @admin.email == 'root@ncsu.edu'  %>
+    <%flash[:notice] = "Note : Email and Password Update for super admin disabled for security reasons" %>
+    <%= render 'form_admin' %>
+<% end %>
 
 <%= link_to 'Show', @admin %> |
 <%= link_to 'Back', admins_homepage_path %>

@@ -20,7 +20,7 @@
   <%= @reservation.status %>
 </p>
 
-<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+
 <% if session[:role] == "admin" %>
     <%= link_to 'Back', admins_homepage_path %>
 <%else%>

@@ -161,6 +161,18 @@ class MembersController < ApplicationController
     @reservations = @member.reservations.where("end_time <= ?", Time.now)
   end
 
+  def futureReservations
+    status_code = isMemberLoggedIn(false)
+    if status_code == false
+      flash[:notice] = "Please login before you continue"
+      render members_signin_path and return
+    end
+    #@member = Member.where("email LIKE ?", session[:email]).first
+    emailmember = params[:email_param]
+    @member = Member.where("email LIKE ?", emailmember).first
+    @reservations = @member.reservations.where("end_time >= ? or start_time >= ?", Time.now, Time.now)
+  end
+
   def isMemberLoggedIn(verifyRole = true)
     if not session[:email].nil? and not session[:email].empty?
       if verifyRole

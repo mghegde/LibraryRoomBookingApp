@@ -15,6 +15,7 @@
         <td><%= member.name %></td>
         <td><%= member.email %></td>
         <td><%= link_to 'Booking History', members_pastReservations_path(email_param: member.email) %></td>
+        <td><%= link_to 'Current/Future Reservations', members_futureReservations_path(email_param: member.email) %></td>
         <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
   <% end %>
