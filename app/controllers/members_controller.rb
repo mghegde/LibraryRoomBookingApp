@@ -331,8 +331,13 @@ class MembersController < ApplicationController
 
     @member.destroy
     respond_to do |format|
-      format.html { redirect_to members_url, notice: 'Member was successfully destroyed.' }
-      format.json { head :no_content }
+      if session[:role] == 'admin'
+        format.html { redirect_to admins_managemember_path, notice: 'Member was successfully destroyed.' }
+        format.json { head :no_content }
+      else
+        format.html { redirect_to members_url, notice: 'Member was successfully destroyed.' }
+        format.json { head :no_content }
+      end
     end
   end
 
