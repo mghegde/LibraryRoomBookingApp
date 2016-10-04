@@ -8,20 +8,7 @@ Password: root
 
 Link to the Heroku Deployment : http://sleepy-garden-67038.herokuapp.com/
 
-Once you are logged in as a member :
-
-1.	Book the room -> Used to reserve a room 
-                     Enter the email addresses of your project partners seperated by commas so as to send them email notifications
-
-2.	Manage reservations -> Displays reservations of the member. You can delete your own reservation 
-
-3.	Search available rooms -> Search rooms on the basis of status, size, building or room number 
-
-4.	Manage profile -> Edit your own profile 
-
-5.	Past reservations -> View reservation history 
-
-If you are logged in as admin : 
+Admin : -
 
 1.	Add new room -> Create a room reservation 
 
@@ -38,7 +25,32 @@ If you are logged in as admin :
 
 7.	Add Multiple reservation permission to members -> Give member access for multiple reservations 
 
-8.	Members with multiple reservation permission -> view members with multiple reservation benefits
+8.	Members with multiple reservation permission -> View members with multiple reservation benefits
+
+9. Manage admins -> Member can view details of other admins except for their passwords. An admin can create ne admins. He can also    delete admins other than root user or himself.
+
+
+Member :
+
+1.	Book the room -> a) Used to reserve a room 
+                     b) Enter the email adresses of your friends seperated by commas to send them email notifications about the booking.
+
+2.	Manage reservations -> Displays reservations of the member. You can delete your own reservation 
+
+3.	Search available rooms -> Search rooms on the basis of status, size, building or room number 
+
+4.	Manage profile -> Edit your own profile 
+
+5.	Past reservations -> View reservation history 
+
+
+Corner cases :-
+
+1. If a room is deleted during an active reservation , the room as well as the reservation will get deleted. The room is no longer available in the search options or manage reservations tab.
+
+2. If a member with an active reservation is deleted , then the member as well as the reservation will be deleted. 
+
+
 
 
 
