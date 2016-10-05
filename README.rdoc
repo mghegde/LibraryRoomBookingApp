@@ -49,16 +49,16 @@ g)	Manage admins :
 •	Admins can delete admins (except himself/herself and root admin)
 
 h)	Manage rooms: 
-•	Admins can create new rooms.If admin creates a room with the status as booked , users cannot book that room.
-•	Admins can view details and schedules of all the rooms.
-•	Delete a room from the system.
-•	If a room is deleted during an active reservation , the room as well as the reservation will get deleted. The room is no longer         available in the search options or manage reservations tab.
+  •	Admins can create new rooms.If admin creates a room with the status as booked , users cannot book that room.
+  •	Admins can view details and schedules of all the rooms.
+  •	Delete a room from the system.
+  •	If a room is deleted during an active reservation , the room as well as the reservation will get deleted. The room is no longer         available in the search options or manage reservations tab.
 
 i)	Manage members :
-•	View the list of all the library members and their profile details (except password)
-•	View the reservation history of a library member
-•	Delete a library member
-•	If a member with an active reservation is deleted , then the member as well as the reservation will be deleted.
+  •	View the list of all the library members and their profile details (except password)
+  •	View the reservation history of a library member
+  •	Delete a library member
+  •	If a member with an active reservation is deleted , then the member as well as the reservation will be deleted.
 
 == 3.	Members:
 
