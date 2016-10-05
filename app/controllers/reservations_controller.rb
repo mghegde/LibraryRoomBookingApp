@@ -37,7 +37,7 @@ class ReservationsController < ApplicationController
   def createreservation
     @room = Room.all
     @reservation = Reservation.new
-    @room1 = Room.where("building LIKE ?", params[:building])
+    @room1 = Room.where("building LIKE ? and status != ?", params[:building], "Booked")
     @room_list = @room1.collect {|room| room.room_number}
     render 'reservations/new'
   end

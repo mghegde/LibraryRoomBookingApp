@@ -253,7 +253,20 @@ class MembersController < ApplicationController
       rooms = Room.all
     end
 
+    if  params[:status].empty? or  params[:status] == 'Available'
+      if rooms.nil?
+          rooms = Room.all.where("status != ?", "Booked")
+      else
+          rooms = rooms.where("status != ?", "Booked")
+      end
+    end
+
     rooms.each do |room|
+      if room.status == 'Booked'
+        @reservedSlotDict[room] = [[currentTime, currentTime.end_of_day]]
+        next
+      end
+
       reservations = room.reservations.where("start_time > ? and end_time < ?", currentTime, currentTime.end_of_day)
 
       reservedSlots = reservations.map {|a| [a.start_time, a.end_time] }
