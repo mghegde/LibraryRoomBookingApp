@@ -212,8 +212,6 @@ class MembersController < ApplicationController
       end
     else
       currentTime = DateTime.now
-      puts "In else part"
-      puts DateTime.now
     end
 
 
@@ -221,10 +219,8 @@ class MembersController < ApplicationController
 
     if not param_array[:building].nil? and not param_array[:building].empty?
       rooms = Room.where(search_string[:building], param_array[:building])
-      puts "Returning NILL ?"
       return nil if rooms.nil?
     end
-    puts "Not returned NUll"
     if not param_array[:size].nil? and not param_array[:size].empty?
       if rooms.nil?
          rooms = Room.where(search_string[:size], param_array[:size])
@@ -280,8 +276,6 @@ class MembersController < ApplicationController
     end
 
     if not param_array[:status].nil? and param_array[:status] == "Booked"
-      puts "reserved slot Dict"
-      puts @reservedSlotDict
       return @reservedSlotDict
     else
       return @roomDict
@@ -314,8 +308,6 @@ class MembersController < ApplicationController
 
     @displayBookedFrom = true if not params[:status].nil? and params[:status] == "Booked" else false
 
-    puts @roomDicts
-    puts  @displayBookedFrom
     render :searchResults
   end
 

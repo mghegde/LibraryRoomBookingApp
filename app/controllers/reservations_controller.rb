@@ -63,8 +63,6 @@ class ReservationsController < ApplicationController
     @current_reservations = Reservation.where("room_number LIKE ? and ? <= end_time and start_time <= ? ", @reservation.room_number,
     @reservation.start_time, @reservation.end_time)
     if not @current_reservations.nil? and not @current_reservations.empty?
-      puts @current_reservations.first.start_time
-      puts @current_reservations.first.room_number
       flash[:notice] = "This room is not available at this time. Conflicts with other reservation which starts at #{@current_reservations.first.start_time} "
       render 'reservations/newreservation' and return
     end
@@ -109,17 +107,10 @@ class ReservationsController < ApplicationController
     @member.first.reservations << @reservation
     SendEmail.reservation_email(@member.first, @reservation).deliver
 
-    puts "reservation"
-    puts @reservation.start_time
-    puts @reservation.end_time
-    puts "Before saving"
 
     respond_to do |format|
       if @member.first.save
         @member.first.reservations.each do |res|
-          puts res.start_time
-          puts res.end_time
-          puts "------------------"
         end
 
         format.html { redirect_to @reservation, notice: 'Reservation was successfully created.' and return }
