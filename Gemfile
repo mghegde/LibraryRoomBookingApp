@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.10'
 group :development, :test do
   gem 'sqlite3'
+  gem 'minitest'
 end
 
 group :production do
