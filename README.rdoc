@@ -1,44 +1,83 @@
 == README
 
+Link to the Heroku Deployment : http://sleepy-garden-67038.herokuapp.com/
+
 Credentials for root user :
 
 Username: root@ncsu.edu
 
 Password: root
 
-Link to the Heroku Deployment : http://sleepy-garden-67038.herokuapp.com/
+Github link : https://github.com/mghegde/LibraryRoomBookingApp
 
-Once you are logged in as a member :
+The Library booking application provides a platforms to admins and members to make reservations. The following points need to be considered while booking a room :
 
-1.	Book the room -> Used to reserve a room 
-                     Enter the email addresses of your project partners seperated by commas so as to send them email notifications
+== 1.	Reservations 
 
-2.	Manage reservations -> Displays reservations of the member. You can delete your own reservation 
+a)	Reservations can be made for 2 hour slots.
 
-3.	Search available rooms -> Search rooms on the basis of status, size, building or room number 
+b)	A reservation is cancelled when the booking period is over or manually earlier.
 
-4.	Manage profile -> Edit your own profile 
+c)	Reservations are available upto a week in advance.
 
-5.	Past reservations -> View reservation history 
+d)	Any member can reserve any room any room as long it is available and the member does not have any other active reservations.
 
-If you are logged in as admin : 
+e)	Admins can reserve rooms on behalf of members.
 
-1.	Add new room -> Create a room reservation 
+f)	A library member can reserve only one room at a particular date and time. Only after his/her reservation is released, he/she can    proceed to reserve another room. But an admin can allow a library member to reserve multiple rooms at one time. An admin can assign member the authority to make more than one reservation.
 
-2.	Book the room -> Create a reservation on behalf of a member by providing email address of the member
-                     Enter the email addresses of member's project partners seperated by commas so as to send them email notifications
+g)	If a member has made a reservation , then the system can send email notifications in his/her team with the details about the       reservation. For this the admin or member should enter the email addresses of the team members separated by commas while making the      reservations.
 
-3.	Manage members -> View member profiles and booking history 
+== 2.	Admins
 
-4.	Manage reservations -> Admin can view reservation details and destroy reservations 
+a)	There is a root admin with credentials :- 
+Email : root@ncsu.edu
+Passwoord: root
 
-5.	Search available rooms -> Search rooms on the basis of status, size, building or room 
+b)	The root admin credentials cannot be edited and the root admin cannot be deleted by any other admin
 
-6.	Manage profile -> Edit your own profile 
+c)	Admins can create another admins or members.
 
-7.	Add Multiple reservation permission to members -> Give member access for multiple reservations 
+d)	You cannot signup as an admin all by yourself.
 
-8.	Members with multiple reservation permission -> view members with multiple reservation benefits
+e)	Admins can log in with an email and password.
+
+f)	Each admin can edit his/her details.    
+
+g)	Manage admins :
+  •	Admins can view the list of all the admins and their profile details (except password).
+  •	Admins can delete admins (except himself/herself and root admin)
+
+h)	Manage rooms: 
+  •	Admins can create new rooms.
+  •	Admins can view details and schedules of all the rooms.
+  •	Delete a room from the system.
+  •	If a room is deleted during an active reservation , the room as well as the reservation will get deleted. The room is no longer         available in the search options or manage reservations tab.
+
+i)	Manage members :
+  •	View the list of all the library members and their profile details (except password)
+  •	View the reservation history of a library member
+  •	Delete a library member
+  •	If a member with an active reservation is deleted , then the member as well as the reservation will be deleted.
+
+== 3.	Members:
+
+a)	A library member will have the following attributes: email (unique for each member), name and password.
+
+b)	Anyone can sign up as a library member using their email, name and password.
+
+c)	Members can Log in with email and password.
+
+d)	Edit her/his profile details.
+
+e)	Search rooms using room number, size, building or status.
+
+f)	Book a room if its status is “Available”.
+
+g)	Delete his own reservation.
+
+h)	View his/her past reservations.
+
 
 
 
