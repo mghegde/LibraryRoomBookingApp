@@ -1,55 +1,59 @@
 == README
 
-Credentials for root user :
-
-Username: root@ncsu.edu
-
-Password: root
-
 Link to the Heroku Deployment : http://sleepy-garden-67038.herokuapp.com/
 
-Admin : -
+Credentials for root user :
+Username: root@ncsu.edu
+Password: root
 
-1.	Add new room -> Create a room reservation 
+Github link : https://github.com/mghegde/LibraryRoomBookingApp
 
-2.	Book the room -> Create a reservation on behalf of a member by providing email address of the member
-                     Enter the email addresses of member's project partners seperated by commas so as to send them email notifications
+The Library booking application provides a platforms to admins and members to make reservations. The following points need to be considered while booking a room :
 
-3.	Manage members -> View member profiles and booking history 
+1.	Reservations 
 
-4.	Manage reservations -> Admin can view reservation details and destroy reservations 
+  a)	Reservations can be made for 2 hour slots.
+  b)	A reservation is cancelled when the booking period is over or manually earlier.
+  c)	Reservations are available upto a week in advance.
+  d)	Any member can reserve any room any room as long it is available and the member does not have any other active reservations.
+  e)	Admins can reserve rooms on behalf of members.
+  f)	A library member can reserve only one room at a particular date and time. Only after his/her reservation is released, he/she can         proceed to reserve another room. But an admin can allow a library member to reserve multiple rooms at one time.
+  g)	If a member has made a reservation , then the system can send email notifications in his/her team with the details about the       reservation. For this the admin or member should enter the email addresses of the team members separated by commas while making the      reservations.
 
-5.	Search available rooms -> Search rooms on the basis of status, size, building or room 
+2.	Admins
 
-6.	Manage profile -> Edit your own profile 
+  a)	There is a root admin with credentials :- 
+      Email : root@ncsu.edu
+      Passwoord: root
+  b)	The root admin credentials cannot be edited and the root admin cannot be deleted by any other admin
+  c)	Admins can create another admins or members.
+  d)	You cannot signup as an admin all by yourself.
+  e)	Admins can log in with an email and password.
+  f)	Each admin can edit his/her details.    
+  g)	Manage admins :
+      •	Admins can view the list of all the admins and their profile details (except password).
+      •	Admins can delete admins (except himself/herself and root admin)
+  h)	Manage rooms: 
+      •	Admins can create new rooms.
+      •	Admins can view details and schedules of all the rooms.
+      •	Delete a room from the system.
+      •	If a room is deleted during an active reservation , the room as well as the reservation will get deleted. The room is no longer         available in the search options or manage reservations tab.
+  i)	Manage members :
+      •	View the list of all the library members and their profile details (except password)
+      •	View the reservation history of a library member
+      •	Delete a library member
+      •	If a member with an active reservation is deleted , then the member as well as the reservation will be deleted.
 
-7.	Add Multiple reservation permission to members -> Give member access for multiple reservations 
+3.	Members:
 
-8.	Members with multiple reservation permission -> View members with multiple reservation benefits
-
-9. Manage admins -> Member can view details of other admins except for their passwords. An admin can create ne admins. He can also    delete admins other than root user or himself.
-
-
-Member :
-
-1.	Book the room -> a) Used to reserve a room 
-                     b) Enter the email adresses of your friends seperated by commas to send them email notifications about the booking.
-
-2.	Manage reservations -> Displays reservations of the member. You can delete your own reservation 
-
-3.	Search available rooms -> Search rooms on the basis of status, size, building or room number 
-
-4.	Manage profile -> Edit your own profile 
-
-5.	Past reservations -> View reservation history 
-
-
-Corner cases :-
-
-1. If a room is deleted during an active reservation , the room as well as the reservation will get deleted. The room is no longer available in the search options or manage reservations tab.
-
-2. If a member with an active reservation is deleted , then the member as well as the reservation will be deleted. 
-
+  a)	A library member will have the following attributes: email (unique for each member), name and password.
+  b)	Anyone can sign up as a library member using their email, name and password.
+  c)	Members can Log in with email and password.
+  d)	Edit her/his profile details.
+  e)	Search rooms using room number, size, building or status.
+  f)	Book a room if its status is “Available”.
+  g)	Delete his own reservation.
+  h)	View his/her past reservations.
 
 
 
