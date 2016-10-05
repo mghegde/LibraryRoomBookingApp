@@ -26,31 +26,39 @@ f)	A library member can reserve only one room at a particular date and time. Onl
 
 g)	If a member has made a reservation , then the system can send email notifications in his/her team with the details about the       reservation. For this the admin or member should enter the email addresses of the team members separated by commas while making the      reservations.
 
-2.	Admins
+== 2.	Admins
 
   a)	There is a root admin with credentials :- 
   Email : root@ncsu.edu
   Passwoord: root
+  
   b)	The root admin credentials cannot be edited and the root admin cannot be deleted by any other admin
+  
   c)	Admins can create another admins or members.
+  
   d)	You cannot signup as an admin all by yourself.
+  
   e)	Admins can log in with an email and password.
+  
   f)	Each admin can edit his/her details.    
+  
   g)	Manage admins :
   •	Admins can view the list of all the admins and their profile details (except password).
   •	Admins can delete admins (except himself/herself and root admin)
+  
   h)	Manage rooms: 
   •	Admins can create new rooms.
   •	Admins can view details and schedules of all the rooms.
   •	Delete a room from the system.
   •	If a room is deleted during an active reservation , the room as well as the reservation will get deleted. The room is no longer         available in the search options or manage reservations tab.
+  
   i)	Manage members :
   •	View the list of all the library members and their profile details (except password)
   •	View the reservation history of a library member
   •	Delete a library member
   •	If a member with an active reservation is deleted , then the member as well as the reservation will be deleted.
 
-3.	Members:
+== 3.	Members:
 
   a)	A library member will have the following attributes: email (unique for each member), name and password.
   b)	Anyone can sign up as a library member using their email, name and password.
