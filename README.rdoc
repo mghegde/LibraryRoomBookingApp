@@ -10,7 +10,7 @@ Github link : https://github.com/mghegde/LibraryRoomBookingApp
 
 The Library booking application provides a platforms to admins and members to make reservations. The following points need to be considered while booking a room :
 
-1.	Reservations 
+== 1.	Reservations 
 
 a)	Reservations can be made for 2 hour slots.
 
