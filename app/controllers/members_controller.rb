@@ -267,7 +267,7 @@ class MembersController < ApplicationController
         next
       end
 
-      reservations = room.reservations.where("start_time > ? and end_time < ?", currentTime, currentTime.end_of_day)
+      reservations = room.reservations.where("end_time >= ? and end_time <= ?", currentTime, currentTime.end_of_day)
 
       reservedSlots = reservations.map {|a| [a.start_time, a.end_time] }
 
