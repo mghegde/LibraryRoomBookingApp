@@ -31,7 +31,7 @@ g)	If a member has made a reservation , then the system can send email notificat
 == 2.	Admins
 
 a)	There is a root admin with credentials :- 
-            Email : root@ncsu.edu
+            Email     : root@ncsu.edu
             Passwoord : root
 
 b)	The root admin credentials cannot be edited and the root admin cannot be deleted by any other admin
@@ -85,6 +85,3 @@ We have tested the 'member' model and controller. You can run the testcases usin
 rake test test/controllers/members_controller_test.rb
 
 rake test test/models/member_test.rb
-
-
-
