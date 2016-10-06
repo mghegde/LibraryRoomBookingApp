@@ -45,11 +45,11 @@ e)	Admins can log in with an email and password.
 f)	Each admin can edit his/her details.    
 
 g)	Manage admins :
-  •	Admins can view the list of all the admins and their profile details (except password).
-  •	Admins can delete admins (except himself/herself and root admin)
+•	Admins can view the list of all the admins and their profile details (except password).
+•	Admins can delete admins (except himself/herself and root admin)
 
 h)	Manage rooms: 
-  •	Admins can create new rooms.
+  •	Admins can create new rooms.If admin creates a room with the status as booked , users cannot book that room.
   •	Admins can view details and schedules of all the rooms.
   •	Delete a room from the system.
   •	If a room is deleted during an active reservation , the room as well as the reservation will get deleted. The room is no longer         available in the search options or manage reservations tab.
@@ -78,6 +78,13 @@ g)	Delete his own reservation.
 
 h)	View his/her past reservations.
 
+== 4.	Testing:
+
+We have tested the 'member' model and controller. You can run the testcases using the following commands :
+
+rake test test/controllers/members_controller_test.rb
+
+rake test test/models/member_test.rb
 
 
 
