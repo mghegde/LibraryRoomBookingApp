@@ -1,6 +1,6 @@
 == README
 
-Link to the Heroku Deployment : http://sleepy-garden-67038.herokuapp.com/
+Link to the Heroku Deployment : http://bit.ly/Program_1_OODD
 
 Credentials for root user :
 
