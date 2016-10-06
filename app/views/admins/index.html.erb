@@ -1,4 +1,8 @@
 <h1>Listing admins</h1>
+<% if flash.notice %>
+    <div class="error"><%= flash[:notice] %></div>
+    <% flash.clear %>
+<% end %>
 
 <table>
   <thead>
