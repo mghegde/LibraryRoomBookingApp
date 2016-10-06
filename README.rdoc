@@ -82,6 +82,6 @@ h)	View his/her past reservations.
 
 We have tested the 'member' model and controller. You can run the testcases using the following commands :
 
-rake test test/controllers/members_controller_test.rb
+    rake test test/controllers/members_controller_test.rb
 
-rake test test/models/member_test.rb
+    rake test test/models/member_test.rb
