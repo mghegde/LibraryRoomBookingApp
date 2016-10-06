@@ -27,7 +27,7 @@ class MembersController < ApplicationController
     end
 
     @member = Member.where("email LIKE ?", session[:email]).first
-    @reservations = @member.reservations
+    @reservations = @member.reservations.where("end_time >= ?", Time.now)
     render 'reservations/managereservation'
   end
 
