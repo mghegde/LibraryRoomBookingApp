@@ -32,7 +32,7 @@ class AdminsController < ApplicationController
       render admins_signin_path and return
     end
 
-    @reservations = Reservation.all
+    @reservations = Reservation.all.where("end_time >= ?", Time.now)
     render 'reservations/manageadminreservation'
   end
   # GET /admins/1
