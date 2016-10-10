@@ -1,12 +1,12 @@
 == README
 
-Link to the Heroku Deployment : http://sleepy-garden-67038.herokuapp.com/
+Link to the Heroku Deployment : http://bit.ly/Program_1_OODD
 
 Credentials for root user :
 
-Username: root@ncsu.edu
+                Username: root@ncsu.edu
 
-Password: root
+                Password: root
 
 Github link : https://github.com/mghegde/LibraryRoomBookingApp
 
@@ -31,8 +31,8 @@ g)	If a member has made a reservation , then the system can send email notificat
 == 2.	Admins
 
 a)	There is a root admin with credentials :- 
-Email : root@ncsu.edu
-Passwoord: root
+            Email     : root@ncsu.edu
+            Passwoord : root
 
 b)	The root admin credentials cannot be edited and the root admin cannot be deleted by any other admin
 
@@ -48,7 +48,7 @@ g)	Manage admins :
 •	Admins can view the list of all the admins and their profile details (except password).
 •	Admins can delete admins (except himself/herself and root admin)
 
-h)	Manage rooms: 
+h)	Manage rooms : 
   •	Admins can create new rooms.If admin creates a room with the status as booked , users cannot book that room.
   •	Admins can view details and schedules of all the rooms.
   •	Delete a room from the system.
@@ -60,7 +60,7 @@ i)	Manage members :
   •	Delete a library member
   •	If a member with an active reservation is deleted , then the member as well as the reservation will be deleted.
 
-== 3.	Members:
+== 3.	Members :
 
 a)	A library member will have the following attributes: email (unique for each member), name and password.
 
@@ -78,13 +78,10 @@ g)	Delete his own reservation.
 
 h)	View his/her past reservations.
 
-== 4.	Testing:
+== 4.	Testing :
 
 We have tested the 'member' model and controller. You can run the testcases using the following commands :
 
-rake test test/controllers/members_controller_test.rb
+    rake test test/controllers/members_controller_test.rb
 
-rake test test/models/member_test.rb
-
-
-
+    rake test test/models/member_test.rb
