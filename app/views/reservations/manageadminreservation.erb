@@ -19,7 +19,7 @@
         <td><%= reservation.room_number %></td>
         <td><%= reservation.room.building %></td>
         <td><%= reservation.room.size %></td>
-        <td><%= reservation.created_at %></td>
+        <td><%= reservation.start_time %></td>
         <td><%= reservation.end_time %></td>
         <td><%= reservation.member.name %></td>
         <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>

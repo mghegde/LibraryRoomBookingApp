@@ -67,6 +67,7 @@ class ReservationsController < ApplicationController
       render 'reservations/newreservation' and return
     end
 
+
     if @reservation.start_time > @reservation.end_time
       flash[:notice] = "ERROR: Booking start  time can't be greater than end time"
       render 'reservations/newreservation' and return
@@ -79,6 +80,11 @@ class ReservationsController < ApplicationController
 
     if Time.now + 7.days < @reservation.start_time
       flash[:notice] = "ERROR : Reservation can be made only 1 week in advance from today"
+      render 'reservations/newreservation' and return
+    end
+
+    if @reservation.start_time == @reservation.end_time
+      flash[:notice] = "ERROR: Please book the room for atleast 1 minute!"
       render 'reservations/newreservation' and return
     end
 
@@ -140,9 +146,13 @@ class ReservationsController < ApplicationController
   # DELETE /reservations/1.json
   def destroy
     @reservation.destroy
-    respond_to do |format|
-      format.html { redirect_to reservations_url, notice: 'Reservation was successfully destroyed.' }
-      format.json { head :no_content }
+    if session[:role] == "admin"
+      respond_to do |format|
+        format.html { redirect_to admins_managereservation_path, notice: 'Reservation was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to members_managereservation_path
     end
   end
 
